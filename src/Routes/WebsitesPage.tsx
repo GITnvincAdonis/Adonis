@@ -124,9 +124,9 @@ const Websites = [
     siteLink: "https://chess-club-frontend-lime.vercel.app/#/",
     checkBoxes: [
       "Full Stack",
-      "APIs build on express with CORS",
-      "FrontEnd build on React and tailwind CSS",
-      "PostgreSQL database Solution",
+      "APIs built on express with CORS",
+      "FrontEnd built on React and tailwind CSS",
+      "PostgreSQL database solution",
     ],
   },
   {

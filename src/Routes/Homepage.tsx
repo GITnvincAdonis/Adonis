@@ -33,7 +33,7 @@ export default function Homepage() {
             <p className="font-medium lg:text-md text-sm">
               FULLSTACK Web developer capable of creating applications with
               custom backends (database and API). With a keen eye for design,
-              technical know how for devloping apps and the design principles to
+              technical know how for developing apps and the design principles to
               support interfacing with my applications, i can make anything.
             </p>
           </div>
@@ -133,7 +133,7 @@ const socialContent = [
             <YoutubeIcon size={35}></YoutubeIcon>
             <Button className="px-0" variant={"link"}>
               <div className="  text-wrap text-xs text-start lg:max-w-[15rem] max-w-[8rem]">
-                Youtube - motions graphics, etc.
+                Youtube - motion graphics renders, etc.
               </div>
             </Button>
           </div>
