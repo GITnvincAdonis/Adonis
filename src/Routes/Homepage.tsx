@@ -2,6 +2,7 @@ import { Button } from "@/Npx-Shad-Components/components/button";
 import { GitHubIcon, LinkedInIcon, UnityIcon, YoutubeIcon } from "@/SVGs/SVGS";
 import { TechCarousel } from "./CustomComponents/TechCarousel";
 import { CarouselIcons } from "@/SVGs/SVGS";
+import { Link, Outlet } from "react-router-dom";
 
 export default function Homepage() {
   return (
@@ -17,11 +18,11 @@ export default function Homepage() {
               Get In Touch
             </Button>
           </div>
-          <p className="text-medium">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure
-            pariatur magnam corrupti dicta eaque tenetur ex distinctio
-            veritatis, qui iste blanditiis ut maxime porro placeat voluptatum
-            exercitationem odio harum consectetur.
+          <p className="font-medium">
+            FULLSTACK Web developer capable of creating applications with custom
+            backends (database and API). With a keen eye for design, technical
+            know how for devloping apps and the design principles to support
+            interfacing with my applications, i can make anything.
           </p>
           <div className="grid mt-[3rem] grid-cols-2">
             <div className="">
@@ -58,7 +59,8 @@ export default function Homepage() {
           </div>
           <div className="text-center">technologies ive worked with</div>
         </div>
-      </div>
+      </div>{" "}
+      <Outlet></Outlet>
     </>
   );
 }
@@ -69,9 +71,11 @@ const projectContent = [
       <>
         <div className="leading-[.1rem] ">
           <div className="font-medium">
-            <Button className="p-0 text-xl" variant={"link"}>
-              <span>Websites</span> <UnityIcon size={20}></UnityIcon>
-            </Button>
+            <Link to={"/Websites"}>
+              <Button className="p-0 text-xl" variant={"link"}>
+                <span>Websites</span> <UnityIcon size={20}></UnityIcon>
+              </Button>
+            </Link>
           </div>{" "}
           <br></br>
           <span className="text-sm">web applications build by myself</span>
@@ -102,41 +106,44 @@ const socialContent = [
   {
     content: (
       <>
-        <div className="flex items-center space-x-3">
-          <YoutubeIcon size={35}></YoutubeIcon>
-          <Button variant={"link"}>
-            {" "}
-            <h3 className="font-medium">Youtube - motions graphics, etc.</h3>
-          </Button>
-        </div>
+        <a href="https://www.youtube.com/@semi_jared39">
+          <div className="flex items-center space-x-3">
+            <YoutubeIcon size={35}></YoutubeIcon>
+            <Button className="px-0" variant={"link"}>
+              <h3 className="font-medium">Youtube - motions graphics, etc.</h3>
+            </Button>
+          </div>
+        </a>
       </>
     ),
   },
   {
     content: (
       <>
-        <div className="flex items-center space-x-3">
-          <GitHubIcon size={35}></GitHubIcon>
-          <Button variant={"link"}>
-            {" "}
-            <h3 className="font-medium">
-              GitHub - Commit history and projects
-            </h3>
-          </Button>
-        </div>
+        <a href="https://github.com/GITnvincAdonis">
+          <div className="flex items-center space-x-3">
+            <GitHubIcon size={35}></GitHubIcon>
+            <Button className="px-0" variant={"link"}>
+              <h3 className="font-medium">
+                GitHub - Commit history and projects
+              </h3>
+            </Button>
+          </div>
+        </a>
       </>
     ),
   },
   {
     content: (
       <>
-        <div className="flex items-center space-x-3">
-          <LinkedInIcon size={35}></LinkedInIcon>
-          <Button variant={"link"}>
-            {" "}
-            <h3 className="font-medium">LinkedIn</h3>
-          </Button>
-        </div>
+        <a href="https://www.linkedin.com/in/raveon-adonis-749305330/">
+          <div className="flex items-center space-x-3">
+            <LinkedInIcon size={35}></LinkedInIcon>
+            <Button className="px-0" variant={"link"}>
+              <h3 className="font-medium">LinkedIn</h3>
+            </Button>
+          </div>
+        </a>
       </>
     ),
   },

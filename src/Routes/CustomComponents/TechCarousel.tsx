@@ -35,7 +35,7 @@ export function TechCarousel(props: {
               <CarouselItem key={index} className="pl-1 basis-1/ ">
                 <div className="pb-1">
                   <Card className="rounded-sm flex items-center border">
-                    <div className="text-2xl font-semibold text-center">
+                    <div className="text-2xl font-semibold text-center px-3 py-1">
                       {item.icon}
                     </div>
                   </Card>

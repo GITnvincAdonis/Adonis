@@ -68,7 +68,7 @@ export function UnityIcon(props: { size: number }) {
     </>
   );
 }
-const CarouselIconSize = 40;
+const CarouselIconSize = 30;
 
 export const CarouselIcons = [
   {
