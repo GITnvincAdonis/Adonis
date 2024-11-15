@@ -28,7 +28,7 @@ export function CImage(props: {
       <img
         onLoad={() => {
           loadFunc();
-          console.log("loading");
+          console.log("image loaded");
         }}
         className={`${classNames}`}
         src={`${myImage}`}
@@ -46,8 +46,9 @@ export function CImage(props: {
 export function CVid(props: {
   CloudinaryVideoID: string;
   classNames?: string;
+  loadFunc?: any;
 }) {
-  const { CloudinaryVideoID, classNames } = props;
+  const { CloudinaryVideoID, classNames, loadFunc } = props;
   const cld = new Cloudinary({
     cloud: { cloudName: `${import.meta.env.VITE_CLOUDINARY_NAME}` },
   });
@@ -62,7 +63,10 @@ export function CVid(props: {
         autoPlay
         loop
         muted
-        controls
+        onLoad={() => {
+          loadFunc();
+          console.log("video loaded");
+        }}
       ></AdvancedVideo>
     );
   } catch (error) {

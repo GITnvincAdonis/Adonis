@@ -30,6 +30,7 @@ export function TechCarousel(props: {
       <CarouselContent className="-m2-1  ">
         {items.map((item, index) => (
           <CarouselHoverItem
+            key={index}
             Intext={techTips[index].name}
             children={
               <CarouselItem key={index} className="pl-1 basis-1/ ">
