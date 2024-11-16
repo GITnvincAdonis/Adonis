@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
 module.exports = {
     darkMode: ["class"],
     content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
@@ -53,5 +54,21 @@ module.exports = {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"),plugin(function ({ addUtilities }) {
+	addUtilities({
+		'.gradient-border': {
+			position: 'relative',
+			display: 'inline-block',
+			padding: '4px', // Border width
+			borderRadius: 'inherit',
+			background: 'linear-gradient(to right, #3b82f6, #9333ea, #f43f5e)',
+		  },
+		  '.gradient-border > *': {
+			position: 'relative',
+			borderRadius: 'inherit',
+		
+			zIndex: '1',
+		  },
+      });
+  })],
 }

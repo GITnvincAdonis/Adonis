@@ -9,6 +9,7 @@ export function YoutubeIcon(props: { size: number }) {
         width={`${size}`}
         height={`${size}`}
         viewBox="0 0 50 50"
+        className={"fill-current text-primary"}
       >
         <path d="M 44.898438 14.5 C 44.5 12.300781 42.601563 10.699219 40.398438 10.199219 C 37.101563 9.5 31 9 24.398438 9 C 17.800781 9 11.601563 9.5 8.300781 10.199219 C 6.101563 10.699219 4.199219 12.199219 3.800781 14.5 C 3.398438 17 3 20.5 3 25 C 3 29.5 3.398438 33 3.898438 35.5 C 4.300781 37.699219 6.199219 39.300781 8.398438 39.800781 C 11.898438 40.5 17.898438 41 24.5 41 C 31.101563 41 37.101563 40.5 40.601563 39.800781 C 42.800781 39.300781 44.699219 37.800781 45.101563 35.5 C 45.5 33 46 29.398438 46.101563 25 C 45.898438 20.5 45.398438 17 44.898438 14.5 Z M 19 32 L 19 18 L 31.199219 25 Z"></path>
       </svg>
@@ -21,6 +22,7 @@ export function GitHubIcon(props: { size: number }) {
     <>
       <svg
         xmlns="http://www.w3.org/2000/svg"
+        className={"fill-current text-primary"}
         x="0px"
         y="0px"
         width={`${size}`}
@@ -39,6 +41,7 @@ export function LinkedInIcon(props: { size: number }) {
     <>
       <svg
         xmlns="http://www.w3.org/2000/svg"
+        className={"fill-current text-primary"}
         x="0px"
         y="0px"
         width={`${size}`}
@@ -75,16 +78,17 @@ export const CarouselIcons = [
     icon: (
       <>
         <svg
-          xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
           width={`${CarouselIconSize}`}
           height={`${CarouselIconSize}`}
           viewBox="0 0 24 24"
+          className={"fill-current text-primary"}
         >
           <path
             d="M5.811,1H19c0.552,0,1,0.448,1,1v6c0,0.552-0.448,1-1,1h-7L5.28,2.28C4.808,1.808,5.142,1,5.811,1z"
             opacity=".35"
+            className=""
           ></path>
           <path d="M5,9h7l6.72,6.72c0.472,0.472,0.138,1.28-0.53,1.28H5c-0.552,0-1-0.448-1-1v-6C4,9.448,4.448,9,5,9z"></path>
           <path
@@ -248,6 +252,7 @@ export const CarouselIcons = [
           id="Layer_1"
           x="0px"
           y="0px"
+          className={"fill-current text-primary"}
           width={`${CarouselIconSize + 50} `}
           height={`${CarouselIconSize + 1}`}
           viewBox="0 0 1004 486"
@@ -268,15 +273,10 @@ export const CarouselIcons = [
           width={`${CarouselIconSize}`}
           height={`${CarouselIconSize}`}
           viewBox="0 0 48 48"
+          className={"fill-current text-primary"}
         >
-          <path
-            fill="#212121"
-            d="M23.697,37.56h1.18c0.84,0,1.631-0.392,2.139-1.061l7.485-9.847l7.485,9.847	c0.508,0.668,1.299,1.061,2.139,1.061h1.18L35.756,25l9.121-12h-1.18c-0.84,0-1.631,0.392-2.139,1.061L34.5,23.347l-7.059-9.287	C26.933,13.392,26.142,13,25.302,13h-1.18l9.121,12L23.697,37.56z"
-          ></path>
-          <path
-            fill="#212121"
-            d="M24,26v-3c0-6.675-5.945-11.961-12.829-10.852C5.812,13.011,2,17.857,2,23.284L2,24v2v0.142	c0,6.553,4.777,11.786,10.868,11.858c5.092,0.06,9.389-3.344,10.707-7.999h-1.028c-0.62,0-1.182,0.355-1.451,0.913	c-1.739,3.595-5.789,5.862-10.228,4.842C6.776,34.815,4,30.981,4,26.783V26H24z M4,23.71c0-4.708,2.804-8.557,6.924-9.478	C16.798,12.92,22,17.352,22,23v1H4V23.71z"
-          ></path>
+          <path d="M23.697,37.56h1.18c0.84,0,1.631-0.392,2.139-1.061l7.485-9.847l7.485,9.847	c0.508,0.668,1.299,1.061,2.139,1.061h1.18L35.756,25l9.121-12h-1.18c-0.84,0-1.631,0.392-2.139,1.061L34.5,23.347l-7.059-9.287	C26.933,13.392,26.142,13,25.302,13h-1.18l9.121,12L23.697,37.56z"></path>
+          <path d="M24,26v-3c0-6.675-5.945-11.961-12.829-10.852C5.812,13.011,2,17.857,2,23.284L2,24v2v0.142	c0,6.553,4.777,11.786,10.868,11.858c5.092,0.06,9.389-3.344,10.707-7.999h-1.028c-0.62,0-1.182,0.355-1.451,0.913	c-1.739,3.595-5.789,5.862-10.228,4.842C6.776,34.815,4,30.981,4,26.783V26H24z M4,23.71c0-4.708,2.804-8.557,6.924-9.478	C16.798,12.92,22,17.352,22,23v1H4V23.71z"></path>
         </svg>
       </>
     ),
@@ -387,6 +387,7 @@ export const CarouselIcons = [
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
+          className={"fill-current text-primary"}
           width={`${CarouselIconSize}}`}
           height={`${CarouselIconSize}`}
           viewBox="0 0 50 50"

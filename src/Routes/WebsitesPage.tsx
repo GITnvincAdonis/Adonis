@@ -79,7 +79,7 @@ export default function WebsitesPage() {
                       >
                         <a href={item.siteLink}>
                           <Button
-                            className={"text-black"}
+                            className={"text-primary"}
                             variant={"secondary"}
                           >
                             <p className="text-center tracking-tight scroll-m-20">

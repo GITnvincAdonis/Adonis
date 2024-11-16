@@ -11,6 +11,9 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { CarouselHoverItem } from "./Routes/CustomComponents/CarouselTooltip";
+import { Switch } from "@/components/ui/switch";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 export default function App() {
   return (
     <>
@@ -48,6 +51,13 @@ export default function App() {
 
 export function Overlay(props: { content: any }) {
   const { content } = props;
+  const [isOn, setToggle] = useState(false);
+  const root = document.documentElement;
+
+  useEffect(() => {
+    if (isOn) root.classList.add("dark");
+    if (!isOn) root.classList.remove("dark");
+  }, [isOn]);
   return (
     <div className="relative inline-block w-full">
       {/* Background Image */}
@@ -56,11 +66,23 @@ export function Overlay(props: { content: any }) {
       {/* Overlay */}
       <div className="fixed  bottom-0 flex w-full p-2 justify-end">
         <Popover>
-          <PopoverTrigger asChild>
-            <Button className="p-7">
-              CLICK ME <ChevronDownCircle></ChevronDownCircle>
-            </Button>
-          </PopoverTrigger>
+          <div className="flex flex-col items-end ">
+            <PopoverTrigger asChild>
+              <div className="space-y-3">
+                <Button className="p-7">
+                  CLICK ME <ChevronDownCircle></ChevronDownCircle>
+                </Button>
+              </div>
+            </PopoverTrigger>{" "}
+            <motion.div animate={{ scale: 2 }} className="my-5 origin-right">
+              <Switch
+                className="outline outline-1"
+                onCheckedChange={(b) => {
+                  setToggle(b);
+                }}
+              ></Switch>
+            </motion.div>
+          </div>
           <PopoverContent className="  w-[9rem] space-y-4">
             <a href="mailto:nvraveon@gmail.com">
               <CarouselHoverItem
