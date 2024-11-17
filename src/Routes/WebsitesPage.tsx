@@ -1,5 +1,5 @@
 import { Button } from "@/Npx-Shad-Components/components/button";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { CImage } from "./CustomComponents/Cloudinary";
@@ -20,13 +20,10 @@ export default function WebsitesPage() {
   }, [loadedCount]);
   return (
     <>
-      <motion.div
-        initial={{ opacity: 1 }}
-        animate={loadedCount === 3 ? { opacity: 0 } : { opacity: 1 }}
-        transition={{ type: "tween" }}
-      >
-        <Loader></Loader>
-      </motion.div>
+      <AnimatePresence>
+        {loadedCount !== 3 && <Loader></Loader>}
+      </AnimatePresence>
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={loadedCount == 3 ? { opacity: 1 } : { opacity: 0 }}

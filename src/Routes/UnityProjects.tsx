@@ -3,7 +3,7 @@ import { CImage, CVid } from "./CustomComponents/Cloudinary";
 import { GitHubIcon, YoutubeIcon } from "@/SVGs/SVGS";
 import Loader from "./CustomComponents/loader";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function UnityProjects() {
   const [loadedCount, setLoadedCount] = useState(0);
@@ -66,15 +66,7 @@ export default function UnityProjects() {
   ];
   return (
     <>
-      <motion.div
-        initial={{ opacity: 1 }}
-        animate={loadedCount === 1 ? { opacity: 0 } : { opacity: 1 }}
-        transition={{ type: "tween" }}
-      >
-        <div>
-          <Loader></Loader>
-        </div>
-      </motion.div>
+      <AnimatePresence>{loadedCount != 1 && <Loader></Loader>}</AnimatePresence>
       <motion.div
         initial={{ opacity: 0 }}
         animate={loadedCount == 1 ? { opacity: 1 } : { opacity: 0 }}

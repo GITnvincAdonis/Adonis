@@ -1,10 +1,13 @@
+import { motion } from "framer-motion";
 import "./loader.css";
 export default function Loader() {
   return (
     <>
-      <div
-        style={{ zIndex: -1 }}
-        className=" fixed  w-full  flex items-center justify-center rounded-lg"
+      <motion.div
+        exit={{ opacity: 0 }}
+        transition={{ delay: 1 }}
+        style={{ zIndex: 100 }}
+        className=" fixed h-full w-full bg-white  flex items-center justify-center rounded-lg"
       >
         <div className="lds-ellipsis">
           <div></div>
@@ -12,7 +15,7 @@ export default function Loader() {
           <div></div>
           <div></div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
