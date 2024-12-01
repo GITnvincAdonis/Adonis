@@ -1,5 +1,11 @@
 import { Button } from "@/Npx-Shad-Components/components/button";
-import { GitHubIcon, LinkedInIcon, UnityIcon, YoutubeIcon } from "@/SVGs/SVGS";
+import {
+  GitHubIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  UnityIcon,
+  YoutubeIcon,
+} from "@/SVGs/SVGS";
 import { TechCarousel } from "./CustomComponents/TechCarousel";
 import { CarouselIcons } from "@/SVGs/SVGS";
 import { Link, Outlet } from "react-router-dom";
@@ -255,6 +261,20 @@ const socialContent = [
             <LinkedInIcon size={35}></LinkedInIcon>
             <Button className="px-0" variant={"link"}>
               <h3 className="text-xs">LinkedIn</h3>
+            </Button>
+          </div>
+        </a>
+      </>
+    ),
+  },
+  {
+    content: (
+      <>
+        <a href="https://www.instagram.com/nv.adonis/">
+          <div className="flex items-center space-x-3">
+            <InstagramIcon size={35}></InstagramIcon>
+            <Button className="px-0" variant={"link"}>
+              <h3 className="text-xs">Instagram</h3>
             </Button>
           </div>
         </a>
