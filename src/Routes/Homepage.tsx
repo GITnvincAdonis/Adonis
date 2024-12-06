@@ -13,6 +13,7 @@ import "@geist-ui/react";
 
 import { CarouselHoverItem } from "./CustomComponents/CarouselTooltip";
 import { motion } from "framer-motion";
+import { SquareArrowOutUpRight } from "lucide-react";
 const MotionVariants = {
   hidden: {
     opacity: 0,
@@ -186,8 +187,12 @@ const projectContent = [
         <div className="leading-[0rem] ">
           <div className="font-medium">
             <Link to={"/Websites"}>
-              <Button className="p-0 text-xl" variant={"link"}>
+              <Button
+                className="px-4 mb-2  outline-dashed outline-1 text-xl"
+                variant="ghost"
+              >
                 <span>Websites</span>
+                <SquareArrowOutUpRight></SquareArrowOutUpRight>
               </Button>
             </Link>
           </div>{" "}
@@ -205,8 +210,12 @@ const projectContent = [
         <div className=" leading-[0rem] ">
           <div className="font-medium flex  m-0 items-center space-x-1">
             <Link to={"/UnityProjects"}>
-              <Button className="p-0 text-xl " variant={"link"}>
-                <span>Unity</span> <UnityIcon size={20}></UnityIcon>
+              <Button
+                className="px-4 mb-2  outline-dashed outline-1 text-xl "
+                variant={"ghost"}
+              >
+                <span>Unity</span> <UnityIcon size={20}></UnityIcon>{" "}
+                <SquareArrowOutUpRight></SquareArrowOutUpRight>
               </Button>
             </Link>
           </div>
@@ -231,6 +240,7 @@ const socialContent = [
               <div className="  text-wrap text-xs text-start lg:max-w-[15rem] max-w-[8rem]">
                 Youtube - motion graphics renders, etc.
               </div>
+              <SquareArrowOutUpRight></SquareArrowOutUpRight>
             </Button>
           </div>
         </a>
@@ -247,6 +257,7 @@ const socialContent = [
               <h3 className="text-wrap text-xs text-start lg:max-w-[15rem] max-w-[8rem]">
                 GitHub - Commit history and projects
               </h3>
+              <SquareArrowOutUpRight></SquareArrowOutUpRight>
             </Button>
           </div>
         </a>
@@ -261,6 +272,7 @@ const socialContent = [
             <LinkedInIcon size={35}></LinkedInIcon>
             <Button className="px-0" variant={"link"}>
               <h3 className="text-xs">LinkedIn</h3>
+              <SquareArrowOutUpRight></SquareArrowOutUpRight>
             </Button>
           </div>
         </a>
@@ -275,6 +287,7 @@ const socialContent = [
             <InstagramIcon size={35}></InstagramIcon>
             <Button className="px-0" variant={"link"}>
               <h3 className="text-xs">Instagram</h3>
+              <SquareArrowOutUpRight></SquareArrowOutUpRight>
             </Button>
           </div>
         </a>
